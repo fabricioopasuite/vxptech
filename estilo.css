@@ -11,6 +11,9 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Estilos do cabeçalho */
@@ -25,37 +28,34 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* Estilos da galeria de imagens */
-.galeria {
+/* Estilos do menu de navegação */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Estilos da seção principal */
+main {
+    flex: 1;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.galeria h2 {
-    margin-bottom: 20px;
-}
-
-.imagens {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.imagens img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.imagens img:hover {
-    transform: scale(1.05);
 }
 
 /* Estilos do rodapé */
@@ -64,7 +64,4 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
